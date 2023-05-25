@@ -1,0 +1,26 @@
+﻿@model IEnumerable<bai3.Models.Book>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBook.cshtml";
+}
+@foreach (var item in Model)
+{
+    <div class="cleaner_with_width">&nbsp;</div>
+
+    <div class="templatemo_product_box">
+        <h1>@item.TenSach<span>(by @item.TacGia)</span></h1>
+        <img src="@item.Hinh" alt="image" />
+        <div class="product_info">
+            <p>@item.MoTa </p>
+            <h3>@item.Gia</h3>
+            <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div>
+            <div class="detail_button"><a href="subpage.html">Detail</a></div>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+    </div>
+
+    <div class="cleaner_with_height">&nbsp;</div>
+}
+
+
